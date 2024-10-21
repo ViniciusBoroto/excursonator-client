@@ -7,12 +7,19 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+     <Tabs aria-label="basic tabs example">
+    <Tab label="Item One" />
+    <Tab label="Item Two"/>
+    <Tab label="Item Three" />
+  </Tabs>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
