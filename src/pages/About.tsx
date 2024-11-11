@@ -21,7 +21,7 @@ const About: React.FC = () => {
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom>
-          Sobre o ViagemComigo
+          Sobre o Excursonator
         </Typography>
       </Box>
 
@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 Nossa Missão
               </Typography>
               <Typography variant="body1" paragraph>
-                O ViagemComigo é uma plataforma dedicada a conectar viajantes com experiências autênticas em sua cidade ou região. Acreditamos na promoção do turismo responsável e no apoio às comunidades locais.
+                O Excursonator é uma plataforma dedicada a conectar viajantes com experiências autênticas em sua cidade ou região. Acreditamos na promoção do turismo responsável e no apoio às comunidades locais.
               </Typography>
               <Typography variant="body1" paragraph>
                 Nossa missão é facilitar a descoberta e participação em excursões únicas, desde passeios históricos até aventuras gastronômicas e trilhas na natureza. Ao reunir organizadores de excursões e viajantes curiosos, nosso objetivo é fomentar uma apreciação mais profunda do rico patrimônio cultural e natural de cada região.
@@ -74,7 +74,7 @@ const About: React.FC = () => {
       {/* Footer */}
       <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6, px: 2, mt: 'auto' }}>
         <Typography variant="body2" color="text.secondary" align="center">
-          © {new Date().getFullYear()} ViagemComigo. Todos os direitos reservados.
+          © {new Date().getFullYear()} Excursonator. Todos os direitos reservados.
         </Typography>
       </Box>
     </Box>

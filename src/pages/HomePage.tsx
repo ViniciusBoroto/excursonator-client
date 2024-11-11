@@ -1,11 +1,22 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent, CardMedia, Button, AppBar, Toolbar, InputBase } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import { Box, Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 
 const featuredExcursions = [
-  { id: 1, title: 'Passeio Histórico pela Cidade', image: 'https://example.com/image1.jpg' },
-  { id: 2, title: 'Aventura Gastronômica', image: 'https://example.com/image2.jpg' },
-  { id: 3, title: 'Trilha na Natureza', image: 'https://example.com/image3.jpg' },
+  { 
+    id: 1, 
+    title: 'Passeio Histórico pelo Centro', 
+    image: '/images/excursao-historica.jpg'
+  },
+  { 
+    id: 2, 
+    title: 'Tour Gastronômico', 
+    image: '/images/tour-gastronomico.jpg'
+  },
+  { 
+    id: 3, 
+    title: 'Trilha na Floresta da Tijuca', 
+    image: '/images/trilha-tijuca.jpg'
+  },
 ];
 
 const HomePage: React.FC = () => {
@@ -16,7 +27,7 @@ const HomePage: React.FC = () => {
         sx={{
           height: '50vh',
           width: '100%',
-          backgroundImage: 'url(https://example.com/hero-image.jpg)',
+          backgroundImage: 'url(/images/hero-image.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
@@ -35,28 +46,9 @@ const HomePage: React.FC = () => {
         </Typography>
       </Box>
 
-      {/* Search Bar */}
-      <AppBar position="static" color="default" sx={{ boxShadow: 'none' }}>
-        <Toolbar sx={{ justifyContent: 'center' }}>
-          <Box sx={{ position: 'relative', width: '100%', maxWidth: 600 }}>
-            <SearchIcon sx={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)' }} />
-            <InputBase
-              placeholder="Buscar excursões..."
-              sx={{
-                width: '100%',
-                bgcolor: 'background.paper',
-                '& .MuiInputBase-input': {
-                  padding: '10px 10px 10px 40px',
-                },
-              }}
-            />
-          </Box>
-        </Toolbar>
-      </AppBar>
-
       {/* Featured Excursions */}
-      <Box sx={{ py: 6, px: 2 }}>
-        <Typography variant="h4" gutterBottom align="center" sx={{ mb: 4 }}>
+      <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <Typography variant="h4" gutterBottom align="center" sx={{ mb: 4, color: 'text.primary' }}>
           Excursões em Destaque
         </Typography>
         <Grid container spacing={4} justifyContent="center">
@@ -70,7 +62,7 @@ const HomePage: React.FC = () => {
                   alt={excursion.title}
                 />
                 <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                  <Typography gutterBottom variant="h6" component="div">
+                  <Typography gutterBottom variant="h6" component="div" color="text.primary">
                     {excursion.title}
                   </Typography>
                   <Button size="small" color="primary" variant="contained" sx={{ mt: 2 }}>
@@ -81,7 +73,7 @@ const HomePage: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-      </Box>
+      </Container>
 
       {/* Call to Action */}
       <Box sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', py: 6, px: 2, textAlign: 'center' }}>
@@ -95,13 +87,6 @@ const HomePage: React.FC = () => {
         <Button variant="contained" color="secondary" size="large">
           Ver Todas as Excursões
         </Button>
-      </Box>
-
-      {/* Footer */}
-      <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6, px: 2, mt: 'auto' }}>
-        <Typography variant="body2" color="text.secondary" align="center">
-          © {new Date().getFullYear()} ViagemComigo. Todos os direitos reservados.
-        </Typography>
       </Box>
     </Box>
   );
