@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, Box, Button, Rating } from '@mui/material';
 
-// This would typically come from an API call
 const mockExcursion = {
   id: 1,
   title: 'Historical City Tour',
@@ -15,8 +14,7 @@ const mockExcursion = {
 };
 
 const ExcursionDetails: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  // In a real app, you'd fetch the excursion data based on the id
+  useParams<{ id: string; }>();
   const excursion = mockExcursion;
 
   return (

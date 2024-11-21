@@ -39,9 +39,9 @@ const HomePage: React.FC = () => {
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom>
-          ViagemComigo
+          Excursonator
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom sx= {{ mb: 4, color: 'black' }}>
           Descubra experiências autênticas em sua região
         </Typography>
       </Box>
@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
           Explore Sua Região
         </Typography>
         <Typography variant="body1" paragraph>
-          ViagemComigo oferece uma variedade de excursões para todos os gostos. 
+          Excursonator oferece uma variedade de excursões para todos os gostos. 
           De passeios históricos a aventuras na natureza, temos algo para você.
         </Typography>
         <Button variant="contained" color="secondary" size="large">

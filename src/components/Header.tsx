@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <AppBar position="static" color="primary">
       <Toolbar>
         <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}>
-          ViagemComigo
+          Excursonator
         </Typography>
         <Box>
           <Button color="inherit" component={Link} to="/">Home</Button>
