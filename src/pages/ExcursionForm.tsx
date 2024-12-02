@@ -1,22 +1,35 @@
-import React, { useState } from 'react';
-import { Box, Container, Typography, TextField, Button, MenuItem, Paper, Grid, useTheme, useMediaQuery } from '@mui/material';
+import React, { useState } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  TextField,
+  Button,
+  MenuItem,
+  Paper,
+  Grid,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 
 const ExcursionForm: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [formData, setFormData] = useState({
-    title: '',
-    theme: '',
-    description: '',
-    itinerary: '',
-    date: '',
-    contact: '',
+    title: "",
+    theme: "",
+    description: "",
+    itinerary: "",
+    date: "",
+    contact: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,24 +39,38 @@ const ExcursionForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100vw', overflowX: 'hidden' }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        width: "100vw",
+        overflowX: "hidden",
+      }}
+    >
       {/* Hero Section */}
       <Box
         sx={{
-          height: isMobile ? '20vh' : '30vh',
-          width: '100%',
-          backgroundImage: 'url(https://example.com/create-excursion-hero-image.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: 'white',
-          textAlign: 'center',
+          height: isMobile ? "20vh" : "30vh",
+          width: "100%",
+          backgroundImage:
+            "url(https://example.com/create-excursion-hero-image.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          textAlign: "center",
         }}
       >
-        <Typography variant={isMobile ? "h4" : "h2"} component="h1" gutterBottom>
+        <Typography
+          variant={isMobile ? "h4" : "h2"}
+          component="h1"
+          color="primary"
+          gutterBottom
+        >
           Criar Nova Excursão
         </Typography>
       </Box>
@@ -149,9 +176,13 @@ const ExcursionForm: React.FC = () => {
       </Container>
 
       {/* Footer */}
-      <Box component="footer" sx={{ bgcolor: 'background.paper', py: 3, px: 2, mt: 'auto' }}>
+      <Box
+        component="footer"
+        sx={{ bgcolor: "background.paper", py: 3, px: 2, mt: "auto" }}
+      >
         <Typography variant="body2" color="text.secondary" align="center">
-          © {new Date().getFullYear()} Excursonator. Todos os direitos reservados.
+          © {new Date().getFullYear()} Excursonator. Todos os direitos
+          reservados.
         </Typography>
       </Box>
     </Box>
